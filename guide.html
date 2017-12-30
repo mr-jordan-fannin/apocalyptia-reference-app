@@ -71,275 +71,287 @@
     -->
 
     <body>
-        <button id="SystemBtn" class="Btn">SYSTEM</button>
+        <div id="DiceRollerBtn" class="Btn">DICE ROLLER</div>
+        <div id="DiceRollerSec" class="Sec0">
+            <label>Rolls:
+                <input type="number" id="diceRolls" min=1 value=1 style="width:3em;">
+            </label>
+            <label>Mod:
+                <input type="number" id="diceMod" min=-12 max=12 value=0 style="width:3em;">
+            </label>
+            <p><span id="diceResult"></span></p>
+            <div id="rollButton" class="Roll" onclick="rollDice()">ROLL</div>
+        </div>
+
+        <div id="SystemBtn" class="Btn">SYSTEM</div>
         <div id="SystemSec" class="Sec0">
-            <button id="SymbolsBtn" class="Btn">SYMBOLS, TERMS, ABBREVIATIONS</button>
+            <div id="SymbolsBtn" class="Btn">SYMBOLS, TERMS, ABBREVIATIONS</div>
             <div id="SymbolsSec" class="Sec1">
-                <button id="DiceTermsBtn" class="Btn">DICE</button>
+                <div id="DiceTermsBtn" class="Btn">DICE</div>
                 <div id="DiceTermsSec" class="Sec2">
-                    <button id="d6TermBtn" class="Btn">d6</button>
+                    <div id="d6TermBtn" class="Btn">d6</div>
                     <div id="d6TermSec" class="Sec3">
                         <p>One six-sided die. The only dice needed to play.</p>
                     </div>
-                    <button id="DifficultyTermBtn" class="Btn">DIFFICULTY (#)</button>
+                    <div id="DifficultyTermBtn" class="Btn">DIFFICULTY (#)</div>
                     <div id="DifficultyTermSec" class="Sec3">
                         <p>Target number you must beat to Succeed.</p>
                     </div>
-                    <button id="ExplodeTermBtn" class="Btn">EXPLODE (6)</button>
+                    <div id="ExplodeTermBtn" class="Btn">EXPLODE (6)</div>
                     <div id="ExplodeTermSec" class="Sec3">
                         <p>Rolling 6, rolling again, and adding up all rolls.</p>
                     </div>
-                    <button id="SuccessTermBtn" class="Btn">SUCCESS (S)</button>
+                    <div id="SuccessTermBtn" class="Btn">SUCCESS (S)</div>
                     <div id="SuccessTermSec" class="Sec3">
                         <p>Rolling above #.</p>
                     </div>
-                    <button id="FailTermBtn" class="Btn">FAIL (F)</button>
+                    <div id="FailTermBtn" class="Btn">FAIL (F)</div>
                     <div id="FailTermSec" class="Sec3">
                         <p>Rolling at or under #.</p>
                     </div>
-                    <button id="BotchTermBtn" class="Btn">BOTCH (1)</button>
+                    <div id="BotchTermBtn" class="Btn">BOTCH (1)</div>
                     <div id="BotchTermSec" class="Sec3">
                         <p>Rolling 1, then re-rolling another 1. Very bad.</p>
                     </div>
-                    <button id="ModifierTermBtn" class="Btn">MODIFIER</button>
+                    <div id="ModifierTermBtn" class="Btn">MODIFIER</div>
                     <div id="ModifierTermSec" class="Sec3">
                         <p>A bonus or penalty to rolls or Difficulties.</p>
                     </div>
-                    <button id="ResultTermBtn" class="Btn">RESULT</button>
+                    <div id="ResultTermBtn" class="Btn">RESULT</div>
                     <div id="ResultTermSec" class="Sec3">
                         <p>The total of a roll plus or minus any modifiers.</p>
                     </div>
                 </div>
-                <button id="GameTermsBtn" class="Btn">GAME</button>
-                <button id="GameTermsSec" class="Sec2">
-                    <button id="AbilityTermBtn" class="Btn">ABILITY</button>
+                <div id="GameTermsBtn" class="Btn">GAME</div>
+                <div id="GameTermsSec" class="Sec2">
+                    <div id="AbilityTermBtn" class="Btn">ABILITY</div>
                     <div id="AbilityTermSec" class="Sec3">
                         <p>Character upgrades that are bought with Experience.</p>
                     </div>
-                    <button id="ActionTermBtn" class="Btn">ACTION</button>
+                    <div id="ActionTermBtn" class="Btn">ACTION</div>
                     <div id="ActionTermSec" class="Sec3">
                         <p>One significant thing a Character does in a round.</p>
                     </div>
-                    <button id="ARTermBtn" class="Btn">AR</button>
+                    <div id="ARTermBtn" class="Btn">AR</div>
                     <div id="ARTermSec" class="Sec3">
                         <p>Armor Rating. Protection given by Armor.</p>
                     </div>
-                    <button id="ATKTermBtn" class="Btn">ATK</button>
+                    <div id="ATKTermBtn" class="Btn">ATK</div>
                     <div id="ATKTermSec" class="Sec3">
                         <p>Attack. Can be Melee or Ranged. Roll vs Defense.</p>
                     </div>
-                    <button id="BDMGTermBtn" class="Btn">BDMG</button>
+                    <div id="BDMGTermBtn" class="Btn">BDMG</div>
                     <div id="BDMGTermSec" class="Sec3">
                         <p>Blunt Damage. Does not cause Bleeding.</p>
                     </div>
-                    <button id="CRTermBtn" class="Btn">CR</button>
+                    <div id="CRTermBtn" class="Btn">CR</div>
                     <div id="CRTermSec" class="Sec3">
                         <p>Cold-Resistant. Delays death from Hypothermia.</p>
                     </div>
-                    <button id="DEFTermBtn" class="Btn">DEF</button>
+                    <div id="DEFTermBtn" class="Btn">DEF</div>
                     <div id="DEFTermSec" class="Sec3">
                         <p>Defense. Block, Dodge, or Reflex. Attack Difficulty.</p>
                     </div>
-                    <button id="DMGTermBtn" class="Btn">DMG</button>
+                    <div id="DMGTermBtn" class="Btn">DMG</div>
                     <div id="DMGTermSec" class="Sec3">
                         <p>Damage. Reduces Health Points.</p>
                     </div>
-                    <button id="DRTermBtn" class="Btn">DR</button>
+                    <div id="DRTermBtn" class="Btn">DR</div>
                     <div id="DRTermSec" class="Sec3">
                         <p>Damage Reduction. Protection given by Cover.</p>
                     </div>
-                    <button id="ExtrasTermBtn" class="Btn">EXTRAS</button>
+                    <div id="ExtrasTermBtn" class="Btn">EXTRAS</div>
                     <div id="ExtrasTermSec" class="Sec3">
                         <p>Non-Player Characters and creatures.</p>
                     </div>
-                    <button id="FastTermBtn" class="Btn">FAST</button>
+                    <div id="FastTermBtn" class="Btn">FAST</div>
                     <div id="FastTermSec" class="Sec3">
                         <p>An action that takes only a split second.</p>
                     </div>
-                    <button id="FDMGTermBtn" class="Btn">FDMG</button>
+                    <div id="FDMGTermBtn" class="Btn">FDMG</div>
                     <div id="FDMGTermSec" class="Sec3">
                         <p>Fire Damage. Can be permanent.</p>
                     </div>
-                    <button id="FRTermBtn" class="Btn">FR</button>
+                    <div id="FRTermBtn" class="Btn">FR</div>
                     <div id="FRTermSec" class="Sec3">
                         <p>Fire-Resistant. Protection against Fire Damage.</p>
                     </div>
-                    <button id="GNTermBtn" class="Btn">GN</button>
+                    <div id="GNTermBtn" class="Btn">GN</div>
                     <div id="GNTermSec" class="Sec3">
                         <p>Game Narrator. The Player who directs the game.</p>
                     </div>
-                    <button id="HPTermBtn" class="Btn">HP</button>
+                    <div id="HPTermBtn" class="Btn">HP</div>
                     <div id="HPTermSec" class="Sec3">
                         <p>Health Points. Maximum Damage Locations can take.</p>
                     </div>
-                    <button id="LocationTermBtn" class="Btn">LOCATION</button>
+                    <div id="LocationTermBtn" class="Btn">LOCATION</div>
                     <div id="LocationTermSec" class="Sec3">
                         <p>Body parts: Head, Torso, Arms, or Legs.</p>
                     </div>
-                    <button id="ManeuverTermBtn" class="Btn">MANEUVER</button>
+                    <div id="ManeuverTermBtn" class="Btn">MANEUVER</div>
                     <div id="ManeuverTermSec" class="Sec3">
                         <p>Special kinds of actions Characters may perform.</p>
                     </div>
-                    <button id="MATKorRATKTermBtn" class="Btn">MATK or RATK</button>
+                    <div id="MATKorRATKTermBtn" class="Btn">MATK or RATK</div>
                     <div id="MATKorRATKTermSec" class="Sec3">
                         <p>Melee Attack or Ranged Attack.</p>
                     </div>
-                    <button id="MGLTermBtn" class="Btn">MGL</button>
+                    <div id="MGLTermBtn" class="Btn">MGL</div>
                     <div id="MGLTermSec" class="Sec3">
                         <p>Master Gear List. Table with every piece of Gear.</p>
                     </div>
-                    <button id="PainTermBtn" class="Btn">PAIN</button>
+                    <div id="PainTermBtn" class="Btn">PAIN</div>
                     <div id="PainTermSec" class="Sec3">
                         <p>Penalty to all rolls from Damage and other sources.</p>
                     </div>
-                    <button id="ReflexTermBtn" class="Btn">REFLEX</button>
+                    <div id="ReflexTermBtn" class="Btn">REFLEX</div>
                     <div id="ReflexTermSec" class="Sec3">
                         <p>Passive Defense = Perception.</p>
                     </div>
-                    <button id="RNGTermBtn" class="Btn">RNG</button>
+                    <div id="RNGTermBtn" class="Btn">RNG</div>
                     <div id="RNGTermSec" class="Sec3">
                         <p>Range incremented in yards.</p>
                     </div>
-                    <button id="RndTermBtn" class="Btn">RND</button>
+                    <div id="RndTermBtn" class="Btn">RND</div>
                     <div id="RndTermSec" class="Sec3">
                         <p>Round. 3 seconds of in-game time, usually in combat.</p>
                     </div>
-                    <button id="ScenarioTermBtn" class="Btn">SCENARIO</button>
-                    <div id="SecnarioTermSec" class="Sec3">
+                    <div id="ScenarioTermBtn" class="Btn">SCENARIO</div>
+                    <div id="ScenarioTermSec" class="Sec3">
                         <p>The type of apocalypse taking place in your game.</p>
                     </div>
-                    <button id="SituationTermBtn" class="Btn">SITUATION</button>
+                    <div id="SituationTermBtn" class="Btn">SITUATION</div>
                     <div id="SituationTermSec" class="Sec3">
                         <p>Circumstances or status effects that cause modifiers.</p>
                     </div>
-                    <button id="SizeTermBtn" class="Btn">SIZE (SZ)</button>
+                    <div id="SizeTermBtn" class="Btn">SIZE (SZ)</div>
                     <div id="SizeTermSec" class="Sec3">
                         <p>Measure of volume and weight. 1Sz ≈ 5lbs ≈ 1/2gal.</p>
                     </div>
                 </div>
-                <button id="TraitsTermsBtn" class="Btn">TRAITS</button>
+                <div id="TraitsTermsBtn" class="Btn">TRAITS</div>
                 <div id="TraitsTermsSec" class="Sec2">
                     <p>Agility, Brains, Constitution, and Demeanor. Rated 1 to 6.</p>
-                    <button id="ATraitTermsBtn" class="Btn">A</button>
+                    <div id="ATraitTermsBtn" class="Btn">A</div>
                     <div id="ATraitTermsSec" class="Sec3">
                         <p>Agility Trait. A rolls are shown as A#.</p>
                     </div>
-                    <button id="BTraitTermsBtn" class="Btn">B</button>
+                    <div id="BTraitTermsBtn" class="Btn">B</div>
                     <div id="BTraitTermsSec" class="Sec3">
                         <p>Brains Trait. B rolls are shown as B#.</p>
                     </div>
-                    <button id="CTraitTermsBtn" class="Btn">C</button>
+                    <div id="CTraitTermsBtn" class="Btn">C</div>
                     <div id="CTraitTermsSec" class="Sec3">
                         <p>Constitution Trait. C rolls are shown as C#.</p>
                     </div>
-                    <button id="DTraitTermsBtn" class="Btn">D</button>
+                    <div id="DTraitTermsBtn" class="Btn">D</div>
                     <div id="DTraitTermsSec" class="Sec3">
                         <p>Demeanor Trait. D rolls are shown as D#.</p>
                     </div>
                 </div>
-                <button id="InstinctsTermsBtn" class="Btn">INSTINCTS</button>
+                <div id="InstinctsTermsBtn" class="Btn">INSTINCTS</div>
                 <div id="InstinctsTermsSec" class="Sec2">
                     <p>Natural talents everyone has based on Traits.</p>
-                    <button id="AthleticsTermsBtn" class="Btn">ATHLETICS</button>
+                    <div id="AthleticsTermsBtn" class="Btn">ATHLETICS</div>
                     <div id="AthleticsTermsSec" class="Sec3">
                         <p>Athletics: = C. Climbing and swimming.</p>
                     </div>
-                    <button id="PerceptionTermsBtn" class="Btn">PERCEPTION</button>
+                    <div id="PerceptionTermsBtn" class="Btn">PERCEPTION</div>
                     <div id="PerceptionTermsSec" class="Sec3">
                         <p>Perception: = B. Processing sensory information.</p>
                     </div>
-                    <button id="SocializeTermsBtn" class="Btn">SOCIALIZE</button>
+                    <div id="SocializeTermsBtn" class="Btn">SOCIALIZE</div>
                     <div id="SocializeTermsSec" class="Sec3">
                         <p>Socialize: = D. Interacting with others.</p>
                     </div>
-                    <button id="StealthTermsBtn" class="Btn">STEALTH</button>
+                    <div id="StealthTermsBtn" class="Btn">STEALTH</div>
                     <div id="StealthTermsSec" class="Sec3">
                         <p>Stealth: = A. Remaining undetected.</p>
                     </div>
                 </div>
-                <button id="SkillsTermsBtn" class="Btn">SKILLS</button>
+                <div id="SkillsTermsBtn" class="Btn">SKILLS</div>
                 <div id="SkillsTermsSec" class="Sec2">
                     <p>12 different types of actions limited by their Traits.</p>
-                    <button id="ASkillsTermsBtn" class="Btn">AGILITY SKILLS</button>
+                    <div id="ASkillsTermsBtn" class="Btn">AGILITY SKILLS</div>
                     <div id="ASkillsTermsSec" class="Sec3">
                         <p>Acrobatics, Ranged, Larceny</p>
                     </div>
-                    <button id="BSkillsTermsBtn" class="Btn">BRAINS SKILLS</button>
+                    <div id="BSkillsTermsBtn" class="Btn">BRAINS SKILLS</div>
                     <div id="BSkillsTermsSec" class="Sec3">
                         <p>Medicine, Science, Survival</p>
                     </div>
-                    <button id="CSkillsTermsBtn" class="Btn">CONSTITUTION SKILLS</button>
+                    <div id="CSkillsTermsBtn" class="Btn">CONSTITUTION SKILLS</div>
                     <div id="CSkillsTermsSec" class="Sec3">
                         <p>Build, Drive, Melee</p>
                     </div>
-                    <button id="DSkillsTermsBtn" class="Btn">DEMEANOR SKILLS</button>
+                    <div id="DSkillsTermsBtn" class="Btn">DEMEANOR SKILLS</div>
                     <div id="DSkillsTermsSec" class="Sec3">
                         <p>Entertain, Leadership, Tame</p>
                     </div>
-                    <button id="SpecialtySkillsTermsBtn" class="Btn">SPECIALTY</button>
+                    <div id="SpecialtySkillsTermsBtn" class="Btn">SPECIALTY</div>
                     <div id="SpecialtySkillsTermsSec" class="Sec3">
                         <p>Sub-Skill that can change independently.</p>
                     </div>
                 </div>
-                <button id="PropertiesTermsBtn" class="Btn">PROPERTIES</button>
+                <div id="PropertiesTermsBtn" class="Btn">PROPERTIES</div>
                 <div id="PropertiesTermsSec" class="Sec2">
                     <p>Trait-derived values.</p>
-                    <button id="CarryTermsBtn" class="Btn">CARRY</button>
+                    <div id="CarryTermsBtn" class="Btn">CARRY</div>
                     <div id="CarryTermsSec" class="Sec3">
                         <p>[C x6]. Maximum total Size you can carry.</p>
                     </div>
-                    <button id="DMGModTermsBtn" class="Btn">DMG MOD</button>
+                    <div id="DMGModTermsBtn" class="Btn">DMG MOD</div>
                     <div id="DMGModTermsSec" class="Sec3">
                         <p>Melee and Ranged(Thrown) Damage modifier.</p>
                     </div>
-                    <button id="LuckTermsBtn" class="Btn">LUCK</button>
+                    <div id="LuckTermsBtn" class="Btn">LUCK</div>
                     <div id="LuckTermsSec" class="Sec3">
                         <p>D /day. Spend for various effects.</p>
                     </div>
-                    <button id="PsycheTermsBtn" class="Btn">PSYCHE</button>
+                    <div id="PsycheTermsBtn" class="Btn">PSYCHE</div>
                     <div id="PsycheTermsSec" class="Sec3">
                         <p>= [D]. Self-tracked mental health.</p>
                     </div>
-                    <button id="SpeedTermsBtn" class="Btn">SPEED</button>
+                    <div id="SpeedTermsBtn" class="Btn">SPEED</div>
                     <div id="SpeedTermsSec" class="Sec3">
                         <p>Walking Speed = [A + C] yds. Jog = Speed x2.</p>
                     </div>
-                    <button id="ThresholdTermsBtn" class="Btn">THRESHOLD</button>
+                    <div id="ThresholdTermsBtn" class="Btn">THRESHOLD</div>
                     <div id="ThresholdTermsSec" class="Sec3">
                         <p>= [C + D]. Pain you can take before passing out.</p>
                     </div>
-                    <button id="XPTermsBtn" class="Btn">XP</button>
+                    <div id="XPTermsBtn" class="Btn">XP</div>
                     <div id="XPTermsSec" class="Sec3">
                         <p>Experience Points = B x6, then B each in-game week.</p>
                     </div>
                 </div>
-                <button id="FontTermsBtn" class="Btn">FONTS</button>
+                <div id="FontTermsBtn" class="Btn">FONTS</div>
                 <div id="FontTermsSec" class="Sec2">
-                    <button id="BracketedTextTermsBtn" class="Btn">[BRACKETED TEXT]</button>
+                    <div id="BracketedTextTermsBtn" class="Btn">[BRACKETED TEXT]</div>
                     <div id="BracketedTextTermsSec" class="Sec3">
                         <p>Game system formula.</p>
                     </div>
-                    <button id="ItalicTextTermsBtn" class="Btn">ITALIC TEXT</button>
+                    <div id="ItalicTextTermsBtn" class="Btn">ITALIC TEXT</div>
                     <div id="ItalicTextTermsSec" class="Sec3">
                         <p>An Ability, Maneuver, or Situation.</p>
                     </div>
-                    <button id="ParentheticTextTermsBtn" class="Btn">(PARENTHETIC TEXT)</button>
+                    <div id="ParentheticTextTermsBtn" class="Btn">(PARENTHETIC TEXT)</div>
                     <div id="ParentheticTextTermsSec" class="Sec3">
                         <p>Specialized Skill/Maneuver/Situation.</p>
                     </div>
-                    <button id="UnderlinedTextTermsBtn" class="Btn">UNDERLINED TEXT</button>
+                    <div id="UnderlinedTextTermsBtn" class="Btn">UNDERLINED TEXT</div>
                     <div id="UnderlinedTextTermsSec" class="Sec3">
                         <p>A Skill.</p>
                     </div>
-                    <button id="ItalicUnderlinedTextTermsBtn" class="Btn">ITALIC/UNDERLINED TEXT</button>
+                    <div id="ItalicUnderlinedTextTermsBtn" class="Btn">ITALIC/UNDERLINED TEXT</div>
                     <div id="ItalicUnderlinedTextTermsSec" class="Sec3">
                         <p>An Instinct.</p>
                     </div>
-                    <button id="BoldItalicCapsTermsBtn" class="Btn">BOLD/ITALIC/CAPS TEXT</button>
+                    <div id="BoldItalicCapsTermsBtn" class="Btn">BOLD/ITALIC/CAPS TEXT</div>
                     <div id="BoldItalicCapsTermsSec" class="Sec3">
                         <p>A Table.</p>
                     </div>
-                    <button id="BoldItalicUnderlinedTermsBtn" class="Btn">BOLD/ITALIC/UNDERLINED</button>
+                    <div id="BoldItalicUnderlinedTermsBtn" class="Btn">BOLD/ITALIC/UNDERLINED</div>
                     <div id="BoldItalicUnderlinedTermsSec" class="Sec3">
                         <p>A Trait name or Trait abbreviation.</p>
                     </div>
@@ -4929,35 +4941,26 @@
 
         <div id="TableRollerBtn" class="Btn">TABLE ROLLER</div>
         <div id="TableRollerSec" class="Sec0">
-            <label>TABLE ROLLER
-                <select id="TableRollSelection">
-                    <option value="iMasterGearList">Master Gear List</option>
-                    <option value="iArmorList">Armor</option>
-                    <option value="iMeleeWeaponsList">Melee Weapons</option>
-                    <option value="iRangedWeaponsList">Ranged Weapons</option>
-                    <option value="iAmmoList">Ammunition</option>
-                    <option value="iBombsList">Bomb</option>
-                    <option value="iDrugList">Drugs</option>
-                    <option value="iMedicalList">Medical</option>
-                    <option value="iLandVehiclesList">Land Vehicle</option>
-                    <option value="iWatercraftList">Watercraft</option>
-                    <option value="iAircraftList">Aircraft</option>
-                </select>
-            </label>
+            <select id="TableRollSelection">
+                <option value="iMasterGearList">Master Gear List</option>
+                <option value="iArmorList">Armor</option>
+                <option value="iMeleeWeaponsList">Melee Weapons</option>
+                <option value="iRangedWeaponsList">Ranged Weapons</option>
+                <option value="iAmmoList">Ammunition</option>
+                <option value="iBombsList">Bomb</option>
+                <option value="iDrugList">Drugs</option>
+                <option value="iMedicalList">Medical</option>
+                <option value="iLandVehiclesList">Land Vehicle</option>
+                <option value="iWatercraftList">Watercraft</option>
+                <option value="iAircraftList">Aircraft</option>
+            </select>
             <p><span id="TableRollResult"></span></p>
-            <div id="rollTableButton" class="Roll" onclick="rollItem('&#34;&#34;, &#34;TableRollResult&#34;')">ROLL TABLE</div>
+            <div id="rollTableButton" class="Roll" onclick="rollItem(document.getElementById('TableRollSelection').value, 'TableRollResult')">ROLL TABLE</div>
         </div>
 
-        <div id="DiceRollerBtn" class="Btn">DICE ROLLER</div>
-        <div id="DiceRollerSec" class="Sec0">
-            <label>Rolls:
-                <input type="number" id="diceRolls" min=1 value=1 style="width:3em;">
-            </label>
-            <label>Mod: 
-                <input type="number" id="diceMod" min=-12 max=12 value=0 style="width:3em;">
-            </label>
-            <p><span id="diceResult"></span></p>
-            <div id="rollButton" class="Roll" onclick="rollDice()">ROLL</div>
+        <div id="TableResultsBtn" class="Btn">TABLE RESULTS</div>
+        <div id="TableResultsSec" class="Sec0">
+            <span id="TableResultsLog"></span>
         </div>
     </body>
 
@@ -5619,38 +5622,13 @@
         })();
 
         //POPULATE CHECK BOXES
-        /*
         (function(){
             let buttons = document.getElementsByClassName('Btn');
             for (let i = 0; i < buttons.length; i++){
                 let id = buttons[i].id;
-                document.getElementById(id).innerHTML += '<input type="checkbox" class="CheckBox" id="'+id+'ChkBox">'+'<label class="CheckSquare" id="'+id+'ChkSqr" onclick="toggleCheck(id)">&#9635</label>';
-            }
-            let rolls = document.getElementsByClassName('Roll');
-            for (i = 0; i < rolls.length; i++){
-                let id = buttons[i].id;
-                id = rolls[i].id;
-                document.getElementById(id).innerHTML += '<input type="checkbox" class="CheckBox" id="'+id+'ChkBox">'+'<label class="CheckSquare" id="'+id+'ChkSqr" onclick="toggleCheck(id)">&#9635</label>';
+                document.getElementById(id).innerHTML += '<input type="checkbox" class="CheckBox" id="'+id+'ChkBox" style="float:right">';
             }
         })();
-        */
-
-        //TOGGLE CHECK BOXES
-        /*
-        function toggleCheck(id){
-            const checkedIcon = String.fromCharCode(9723);
-            const uncheckedIcon = String.fromCharCode(9635);
-            let ChkSqr = document.getElementById(id.id + 'ChkSqr');
-            let ChkBox = document.getElementById(id.id + 'ChkBox');
-            if (ChkSqr.innerHTML === checkedIcon){
-                 ChkSqr.innerHTML = uncheckedIcon;
-                 ChkBox.checked = false;
-            } else {
-                ChkSqr.innerHTML = checkedIcon;
-                ChkBox.checked = true;
-            }
-        }
-        */
 
         //BUTTON CONTROL
         (function(){
@@ -5682,70 +5660,68 @@
 
         //ROLL RANDOM ITEM
         function rollItem(table, place){
-            if (document.getElementById(place+'BtnChkSqr').innerHTML === String.fromCharCode(9635) || place === "TableRollResult") {
-                if (place === "TableRollResult") {
-                    table = document.getElementById("TableRollSelection").value;
-                }
-                switch (table) {
-                    case "iMasterGearList":
-                        table = iMasterGearList;
-                        break;
-                    case "iArmorList":
-                        table = iArmorList;
-                        break;
-                    case "iRangedWeaponsList":
-                        table = iRangedWeaponsList;
-                        break;
-                    case "iMeleeWeaponsList":
-                        table = iMeleeWeaponsList;
-                        break;
-                    case "iAmmoList":
-                        table = iAmmoList;
-                        break;
-                    case "iBombsList":
-                        table = iBombsList;
-                        break;
-                    case "iDrugsList":
-                        table = iDrugsList;
-                        break;
-                    case "iMedicalList":
-                        table = iMedicalList;
-                        break;
-                    case "iLandVehiclesList":
-                        table = iLandVehiclesList;
-                        break;
-                    case "iAircraftList":
-                        table = iAircraftList;
-                        break;
-                    case "iWatercraftList":
-                        table = iWatercraftList;
-                        break;
-                    default:
-                        break;
-                }
-                let rolledItem = table[Math.ceil((Math.random() * table.length) - 1)];
-                if (rolledItem instanceof Array){
-                    rolledItem = rolledItem[Math.ceil((Math.random() * rolledItem.length) - 1)];
-                }
-                if (typeof rolledItem === 'string'){
-                    rollItem(table, place);
-                }
-                if (rolledItem instanceof Armor){
-                    document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>AR: ' + rolledItem.ar + '</p><p>Location(s): ' + rolledItem.loc + '</p><p>Notes: ' + rolledItem.notes + '<p><p>Size: ' + rolledItem.sz + '</p>';
-                } else if (rolledItem instanceof MeleeWeapon){
-                    document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>DMG: ' + rolledItem.dmg + '</p><p>Notes: ' + rolledItem.notes + '<p><p>Size: ' + rolledItem.sz + '</p>';
-                } else if (rolledItem instanceof RangedWeapon){
-                    document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>DMG: ' + rolledItem.dmg + '</p><p>Range: ' + rolledItem.rng + 'yds</p><p>Caliber: ' + rolledItem.cal + '</p><p>Ammo: ' + rolledItem.mag + '</p><p>Notes: ' + rolledItem.notes + '<p><p>Size: ' + rolledItem.sz + '</p>';
-                } else if (rolledItem instanceof Bomb){
-                    document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>Mix: ' + rolledItem.mix + '</p><p>DMG: ' + rolledItem.dmg + '</p><p>Blast: ' + rolledItem.blast + '</p><p>Duration: ' + rolledItem.duration + '</p><p>Effects: ' + rolledItem.effects + '</p><p>Size: ' + rolledItem.sz + '</p>';
-                } else if (rolledItem instanceof Vehicle){
-                    document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>HP: ' + rolledItem.hp + '</p><p>DR: ' + rolledItem.dr + '</p></p>DMG: ' + rolledItem.dmg + '</p><p>Tactical Speed: ' + rolledItem.spd + ' yds/rnd</p><p>Travel Speed: ' + rolledItem.mph + 'mph</p><p>Handle: ' + rolledItem.han + '</p><p>Area: ' + rolledItem.area + '</p><p>MPG: ' + rolledItem.mpg + '</p><p>Fuel: ' + rolledItem.fuel + '</p><p>Occupants: ' + rolledItem.occ + '</p><p>Cargo: ' + rolledItem.car + '</p>';
-                }
-                else if (rolledItem instanceof Gear){
-                    document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>Notes: ' + rolledItem.notes + '</p><p>Size: ' + rolledItem.sz + '</p>';
-                }
-                document.getElementById(place).style = 'margin-left: 10%; margin-right: 10%;';
+            table = document.getElementById("TableRollSelection").value;
+            switch (table) {
+                case "iMasterGearList":
+                    table = iMasterGearList;
+                    break;
+                case "iArmorList":
+                    table = iArmorList;
+                    break;
+                case "iRangedWeaponsList":
+                    table = iRangedWeaponsList;
+                    break;
+                case "iMeleeWeaponsList":
+                    table = iMeleeWeaponsList;
+                    break;
+                case "iAmmoList":
+                    table = iAmmoList;
+                    break;
+                case "iBombsList":
+                    table = iBombsList;
+                    break;
+                case "iDrugsList":
+                    table = iDrugsList;
+                    break;
+                case "iMedicalList":
+                    table = iMedicalList;
+                    break;
+                case "iLandVehiclesList":
+                    table = iLandVehiclesList;
+                    break;
+                case "iAircraftList":
+                    table = iAircraftList;
+                    break;
+                case "iWatercraftList":
+                    table = iWatercraftList;
+                    break;
+                default:
+                    break;
             }
+            let rolledItem = table[Math.ceil((Math.random() * table.length) - 1)];
+            if (rolledItem instanceof Array){
+                rolledItem = rolledItem[Math.ceil((Math.random() * rolledItem.length) - 1)];
+            }
+            if (typeof rolledItem === 'string'){
+                rollItem(table, place);
+            }
+            if (rolledItem instanceof Armor){
+                document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>AR: ' + rolledItem.ar + '</p><p>Location(s): ' + rolledItem.loc + '</p><p>Notes: ' + rolledItem.notes + '<p><p>Size: ' + rolledItem.sz + '</p>';
+            } else if (rolledItem instanceof MeleeWeapon){
+                document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>DMG: ' + rolledItem.dmg + '</p><p>Notes: ' + rolledItem.notes + '<p><p>Size: ' + rolledItem.sz + '</p>';
+            } else if (rolledItem instanceof RangedWeapon){
+                document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>DMG: ' + rolledItem.dmg + '</p><p>Range: ' + rolledItem.rng + 'yds</p><p>Caliber: ' + rolledItem.cal + '</p><p>Ammo: ' + rolledItem.mag + '</p><p>Notes: ' + rolledItem.notes + '<p><p>Size: ' + rolledItem.sz + '</p>';
+            } else if (rolledItem instanceof Bomb){
+                document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>Mix: ' + rolledItem.mix + '</p><p>DMG: ' + rolledItem.dmg + '</p><p>Blast: ' + rolledItem.blast + '</p><p>Duration: ' + rolledItem.duration + '</p><p>Effects: ' + rolledItem.effects + '</p><p>Size: ' + rolledItem.sz + '</p>';
+            } else if (rolledItem instanceof Vehicle){
+                document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>HP: ' + rolledItem.hp + '</p><p>DR: ' + rolledItem.dr + '</p></p>DMG: ' + rolledItem.dmg + '</p><p>Tactical Speed: ' + rolledItem.spd + ' yds/rnd</p><p>Travel Speed: ' + rolledItem.mph + 'mph</p><p>Handle: ' + rolledItem.han + '</p><p>Area: ' + rolledItem.area + '</p><p>MPG: ' + rolledItem.mpg + '</p><p>Fuel: ' + rolledItem.fuel + '</p><p>Occupants: ' + rolledItem.occ + '</p><p>Cargo: ' + rolledItem.car + '</p>';
+            }
+            else if (rolledItem instanceof Gear){
+                document.getElementById(place).innerHTML = '<p>' + rolledItem.type + '</p><p>Notes: ' + rolledItem.notes + '</p><p>Size: ' + rolledItem.sz + '</p>';
+            }
+            document.getElementById(place).style = 'margin-left: 10%; margin-right: 10%;';
+            let oldLog = document.getElementById('TableResultsLog').innerHTML;
+            document.getElementById('TableResultsLog').innerHTML = rolledItem.type + '<br>' + oldLog;
         }
 
         //ROLL DICE
